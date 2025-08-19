@@ -4,23 +4,15 @@ email: your-email@example.com
 description: >-
   A technical blog documenting learning notes and insights in AI, Machine Learning, and Deep Learning.
 baseurl: ""
-url: "https://lausen001.github.io"
+url: "http://localhost:4000"
 twitter_username: 
 github_username: lausen001
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /posts/:title/
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-seo-tag
 
-# Pagination
-paginate: 10
-paginate_path: "/page/:num/"
+# Pagination disabled for local development
 
 # Exclude from processing
 exclude:
@@ -34,6 +26,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - _config_local.yml
 
 # Collections
 collections:
@@ -65,4 +58,4 @@ navigation:
   - name: "Archive"
     link: "/archive/"
   - name: "About"
-    link: "/about/"
+    link: "/about/" 
