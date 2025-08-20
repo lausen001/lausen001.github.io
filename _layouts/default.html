@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{%
         endif %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ " /favicon.ico" | strip | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ " /favicon-32x32.png" | strip | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ " /favicon-16x16.png" | strip | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ " /apple-touch-icon.png" | strip | relative_url }}">
     <meta name="description"
         content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ " /assets/css/style.css" | strip | relative_url }}">
 </head>
 
 <body>
@@ -18,7 +22,8 @@
         <div class="wrapper">
             <div class="header-content">
                 <div class="site-title-area">
-                    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+                    <a class="site-title" rel="author" href="{{ " /" | strip | relative_url }}">{{ site.title | escape
+                        }}</a>
                     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                         <span class="theme-icon moon">🌙</span>
                         <span class="theme-icon sun">☀️</span>
@@ -67,8 +72,17 @@
     <footer class="site-footer">
         <div class="wrapper">
             <div class="footer-content">
-                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | escape }}</p>
-                <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">GitHub
+                <!-- <a href="https://github.com/lausen001" target="_blank" title="GitHub">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a> -->
+                <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | escape }}. Powered by <a
+                        href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">GitHub
                         Pages</a></p>
             </div>
         </div>

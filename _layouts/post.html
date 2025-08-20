@@ -44,17 +44,17 @@ layout: default
 
     <footer class="post-footer">
         <div class="post-navigation">
-            {%- if page.previous.url -%}
+            {%- if page.next.url -%}
             <div class="prev-post">
                 <span>← Previous Post</span>
-                <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+                <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
             </div>
             {%- endif -%}
 
-            {%- if page.next.url -%}
+            {%- if page.previous.url -%}
             <div class="next-post">
                 <span>Next Post →</span>
-                <a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+                <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
             </div>
             {%- endif -%}
         </div>

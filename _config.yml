@@ -1,12 +1,7 @@
 # Site settings
 title: "Lau's Blog"
-email: your-email@example.com
-description: >-
-  A technical blog documenting learning notes and insights in AI, Machine Learning, and Deep Learning.
 baseurl: ""
 url: "https://lausen001.github.io"
-twitter_username: 
-github_username: lausen001
 
 # Build settings
 markdown: kramdown
